@@ -165,6 +165,7 @@ def register() -> None:
     _add_directive("glossary", std.Glossary, raw=False)
     _add_directive("literalinclude", sphinx.directives.code.LiteralInclude)
     _add_directive("toctree", sphinx.directives.other.TocTree)
+    _add_directive("seealso", sphinx.directives.other.SeeAlso)
 
     if HAS_SPHINX_TABS:
         _add_directive("tabs", sphinx_tabs.tabs.TabsDirective, raw=False)
