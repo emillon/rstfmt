@@ -11,6 +11,7 @@ from typing import Any, Dict, Iterator, List, Optional, Tuple, Type, TypeVar
 import docutils
 import sphinx.directives.code
 import sphinx.directives.other
+import sphinx.domains.changeset
 import sphinx.ext.autodoc.directive
 from docutils.parsers.rst import Directive, directives, roles
 
@@ -168,6 +169,7 @@ def register() -> None:
     _add_directive("highlight", sphinx.directives.code.Highlight)
     _add_directive("toctree", sphinx.directives.other.TocTree)
     _add_directive("seealso", sphinx.directives.other.SeeAlso)
+    _add_directive("versionadded", sphinx.domains.changeset.VersionChange)
 
     if HAS_SPHINX_TABS:
         _add_directive("tabs", sphinx_tabs.tabs.TabsDirective, raw=False)
