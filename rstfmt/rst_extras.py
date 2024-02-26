@@ -108,6 +108,7 @@ def register() -> None:
         "rfc-reference",
         "subscript",
         "superscript",
+        "file",
     ]:
         roles.register_canonical_role(r, generic_role)
 
