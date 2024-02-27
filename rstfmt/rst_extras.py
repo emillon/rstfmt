@@ -9,6 +9,7 @@ import importlib
 from typing import Any, Dict, Iterator, List, Optional, Tuple, Type, TypeVar
 
 import docutils
+import sphinx.directives
 import sphinx.directives.code
 import sphinx.directives.other
 import sphinx.domains.changeset
@@ -165,6 +166,7 @@ def register() -> None:
         _add_directive(directive_name, cls, raw=directive_name not in non_raw_directives)
 
     _add_directive("glossary", std.Glossary, raw=False)
+    _add_directive("describe", sphinx.directives.ObjectDescription, raw=False)
     _add_directive("productionlist", std.ProductionList)
     _add_directive("literalinclude", sphinx.directives.code.LiteralInclude)
     _add_directive("highlight", sphinx.directives.code.Highlight)
