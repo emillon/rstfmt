@@ -172,7 +172,7 @@ def register() -> None:
     _add_directive("highlight", sphinx.directives.code.Highlight)
     _add_directive("toctree", sphinx.directives.other.TocTree)
     _add_directive("seealso", sphinx.directives.other.SeeAlso)
-    for d in ["versionadded", "versionchanged"]:
+    for d in ["versionadded", "versionchanged", "deprecated"]:
         _add_directive(d, sphinx.domains.changeset.VersionChange)
 
     if HAS_SPHINX_TABS:
