@@ -165,6 +165,7 @@ def register() -> None:
         _add_directive(directive_name, cls, raw=directive_name not in non_raw_directives)
 
     _add_directive("glossary", std.Glossary, raw=False)
+    _add_directive("productionlist", std.ProductionList)
     _add_directive("literalinclude", sphinx.directives.code.LiteralInclude)
     _add_directive("highlight", sphinx.directives.code.Highlight)
     _add_directive("toctree", sphinx.directives.other.TocTree)
